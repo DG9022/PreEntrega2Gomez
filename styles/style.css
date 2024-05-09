@@ -1,0 +1,357 @@
+* {
+    Margin:0;
+    padding:0;
+} 
+
+html{
+    background-image:url("../images/background.svg");
+    background-size:cover;    
+    /* background-repeat: repeat-x; */
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+    }
+
+/*
+.parallax{
+    background-image: url("...");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+header{
+    background-color: black;
+    color:black;
+    padding: 10px;
+    width: 100%;
+    margin:0px;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    /* width: 1000px; */
+    margin: 0 auto;
+    background-color: none;
+    /* padding: 0 20px 20px 20px; */
+    color:#ffffff;
+    /* border: 5px solid rgb(255, 255, 255); */
+}
+
+h1 {
+    padding: 20px 0;
+    margin-top: 5rem;
+    text-align:center;
+    font-size:5rem;
+}
+
+.tituloprincipal {
+    padding: 20px 0;
+    margin-top: 1rem;
+    text-align:center;
+    font-size:5rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1rem;
+    text-align:justify;
+}
+
+p,
+li {
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 0.1rem;
+}
+
+body img {
+    display:block;
+    margin:0 auto;
+    width: 100;
+    height:auto;
+}
+
+.header img {
+    width: 18rem;
+    height: auto;
+}
+
+.menu nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+.menu nav ul li{
+    display:inline; /*Pone los botones en línea*/
+    margin-right: 1rem; /*Margen de la caja con el borde de la pantalla*/
+    position:relative; /* Posición para las sublistas */
+}
+
+.menu nav ul li a{
+    display:inline-block;
+    padding: 1rem;
+    color:#fff;
+    text-decoration-line: none; /*Quitar la línea de los links*/
+    font-size:2rem;
+}
+
+.menu nav ul li a:hover{ /*Acción para cuando el mouse pasa por encima*/
+    background-color: rgba(203, 138, 0, 1);
+    border-radius: 0.5rem;
+    /* padding:0.5rem; --> Esto causa problemas con el padding del "#menu nav ul li a"*/
+}
+
+.menu nav ul li ul{
+    display: none; /* Ocultar sublistas por defecto */
+    position: absolute; /* Posicionar sublistas de manera absoluta */
+    top: 100%; /* Desplazar sublistas hacia abajo */
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    border: none;/*solid #ccc;*/
+    padding: 0.5rem 0rem;
+    font-size:1rem;
+}
+
+.menu nav ul li:hover ul{
+    display:block; /* Mostrar sublistas cuando se pasa el ratón sobre el elemento padre */
+    border-radius: 0.5rem;
+    padding:0.5rem;}
+
+
+/* Carusel de Imágenes */
+.carousel {
+    overflow: hidden; /* Oculta el desbordamiento para mantener las imágenes dentro del contenedor */
+    width:80%;
+    margin:auto;
+    margin-top:10rem;
+
+}
+/* Estilos para la lista de imágenes */
+.slides {
+    list-style: none; /* Eliminar los puntos de lista */
+    padding: 0; /* Eliminar el relleno predeterminado */
+    margin: 0; /* Eliminar el margen predeterminado */
+    width: auto; /* Ancho suficiente para contener todas las imágenes en línea */
+    white-space: nowrap; /* Evitar el salto de línea */
+    transition: transform 0.5s ease; /* Agregar una transición suave */
+    display: flex; /* Mostrar las imágenes en línea */
+    overflow-x: auto; /* Permitir el desplazamiento horizontal */
+}
+/* Estilos para cada imagen en el carrusel */
+.slides li {
+    flex: 0 0 auto; /* Establecer el ancho de cada imagen */
+    /*width: 16.666%; Define el ancho de cada imagen */
+    width: 100%; /* Ajustar el ancho de cada imagen al ancho del contenedor */
+    flex: 1 0 auto; /* Establece el ancho de cada imagen */
+    margin-right: -60rem;
+}
+
+.slides li:first-child {
+    margin-left: -30rem; /* Elimina el margen izquierdo para el primer elemento */
+}
+
+.slides li img {
+    max-width: 100%; /* Ajusta el ancho de la imagen al ancho del elemento de lista */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    width: 30%;
+}
+
+footer {
+    font-size:2rem;
+    background-color: black;
+}
+
+.footer-general {
+    padding:1rem;
+    margin:0;
+}
+
+.footer-general div h3{
+    margin:1rem;
+}
+
+.contacto {
+    display:flex; /*display flex para contacto que contiene a redes-sociales y a información-contacto*/
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.redes-sociales,
+.informacion-contacto {
+    flex-basis: 45%; /* Define el ancho inicial de cada columna */
+}
+
+.redes-sociales h3,
+.informacion-contacto h3 {
+    margin-bottom: 1rem; /* Espaciado inferior para los encabezados */
+}
+
+.contacto img{
+    display:inline;
+    width: 3rem;
+    margin:0.5  rem;
+    vertical-align: middle;
+}
+
+.contacto a{
+    text-decoration: none;
+    color:#fff;
+    margin:0.5rem;
+    margin-right: 3rem;
+}
+
+.contacto a:hover{
+    background-color: rgba(203, 138, 0, 1);
+    border-radius:0.5rem;
+    padding:1rem;
+}
+
+.volver-arriba {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: sticky;
+    bottom: 2rem;
+    left: 60rem;
+    margin-right: 1rem;
+}
+
+.volver-arriba img{
+    width:5rem;
+    height: auto;
+}
+
+.volver-arriba img:hover{
+    background-color: rgba(36, 107, 150, 1);
+    border-radius: 12rem;
+}
+
+.grid-header {
+    grid-area: header;
+}
+
+.grid-main{
+    grid-area: main;
+}
+
+.grid-section{
+    grid-area: section;
+}
+
+.grid-footer{
+    grid-area: footer;
+}
+
+.grid-container {   
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    width: 100%;
+    height: 100vh;
+}   
+
+/*mobile*/
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .grid-container {   
+        grid-template-columns: 1, 1fr;
+        grid-template-rows: 4rem 100rem 30rem 20rem;
+        grid-template-areas:    
+            "header"
+            "main"
+            "section"
+            "footer"
+            ;
+        /* grid-row-gap: 1rem;
+        grid-column-gap: 1rem; */
+    }   
+}
+
+/*tablet*/
+@media screen and (min-width: 768px) and (max-width:1023px){
+    .grid-container {   
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 4rem 100rem 30rem 20rem;
+        grid-template-areas:    
+            "header header"
+            "main main"
+            "section section"
+            "footer footer"
+            ;
+        /* grid-row-gap: 1rem;
+        grid-column-gap: 1rem; */
+    }   
+}
+
+/*desktop*/
+@media screen and (min-width: 1024px){
+    .grid-container {   
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 4rem 100rem 30rem 20rem;
+        grid-template-areas:    
+            "header header header"
+            "main main main"
+            "section section section"
+            "footer footer footer"
+            ;
+        /* grid-row-gap: 1rem;
+        grid-column-gap: 1rem; */
+    }   
+}
+
+.galeriaImagenes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3rem 4rem 3rem 2rem ;
+    grid-template-areas:
+        "img1 img2 img3"
+        ". . . "
+        "img3 img4 img6"
+    ;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+}
+
+/* .grupo1 img:nth-child(1) */
+.img1 {
+    grid-area: img1 ;
+}
+
+.img2 {
+    grid-area: img2 ;
+}
+.img3 {
+    grid-area: img3 ;
+}
+.img4 {
+    grid-area: img4 ;
+}
+.img5 {
+    grid-area: img5 ;
+}
+.img6 {
+    grid-area: img6 ;
+}
+
+.galeriaImagenes div img{
+    display: flex;  
+    height: 10rem;
+    width: auto;
+}   
