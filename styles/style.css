@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
 * {
-    Margin:0;   
+    margin:0;   
     padding:0;
+    box-sizing: border-box;
 } 
 
 html{
@@ -14,10 +15,10 @@ html{
     font-weight: 400;
     font-style: normal;
     font-size: 62.5%;
-    /*1rem = 10px*/
+    /*1rem = 10px*/ 
     }
 
-/*
+/* 
 .parallax{
     background-image: url("...");
     background-attachment: fixed;
@@ -25,15 +26,14 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
-}
-*/
+} */
 
 header{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /* display:flex; --> Interactúa mal con el flex del body: hace que el menú quede a la izquierda en el contenedor*/
+    justify-content:space-between;
+    /* flex-direction: row; */
     /* align-items: center; */
-    background-color: black;
+    background-color:black;
     /* color:black; */
     padding: 10px;
     width: 100%;
@@ -41,11 +41,79 @@ header{
     position:fixed;
     top:0;
     left:0;
+    z-index:1000; /*Hace que el header esté siempre arriba*/
+}
+
+/*LOGO*/
+.header img {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    width: 18rem;
+    height: auto;
+}
+
+/* .navbar {
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+} */
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menu ul{
+    display:flex;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+.menu ul li{
+    /*display:inline; Pone los botones en línea*/
+    margin-right: 1rem; /*Margen de la caja con el borde de la pantalla*/
+    position:relative; /* Posición para las sublistas */
+}
+
+.menu ul li a{
+    display:inline-block;
+    padding: 1rem;
+    color:#fff;
+    text-decoration-line: none; /*Quitar la línea de los links*/
+    font-size:2rem;
+}
+
+.menu ul li a:hover{ /*Acción para cuando el mouse pasa por encima*/
+    background-color: rgba(203, 138, 0, 1);
+    border-radius: 0.5rem;
+    /* padding:0.5rem; --> Esto causa problemas con el padding del "#menu nav ul li a"*/
+}
+
+.menu ul li ul{
+    display: none; /* Ocultar sublistas por defecto */
+    position: absolute; /* Posicionar sublistas de manera absoluta */
+    top: 100%; /* Desplazar sublistas hacia abajo */
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    border: none;/*solid #ccc;*/
+    padding: 0.5rem 0rem;
+    font-size:1rem;
+    list-style-type: none;
+}
+
+.menu ul li:hover ul{
+    display:block; /* Mostrar sublistas cuando se pasa el ratón sobre el elemento padre */
+    border-radius: 0.5rem;
+    padding:0.5rem;
 }
 
 body {
+    display:flex;
     /* width: 1000px; */
-    margin: 0 auto;
+    margin: 1rem 1rem 1rem 1rem;
     background-color: none;
     /* padding: 0 20px 20px 20px; */
     color:#ffffff;
@@ -89,91 +157,38 @@ li {
     height:auto;
 } */
 
-/*LOGO*/
-.header img {
-    width: 18rem;
-    height: auto;
-}
-
-.menu ul{
-    list-style-type: none;
-    padding:0;
-    margin:0;
-}
-
-.menu ul li{
-    display:inline; /*Pone los botones en línea*/
-    margin-right: 1rem; /*Margen de la caja con el borde de la pantalla*/
-    position:relative; /* Posición para las sublistas */
-}
-
-.menu ul li a{
-    display:inline-block;
-    padding: 1rem;
-    color:#fff;
-    text-decoration-line: none; /*Quitar la línea de los links*/
-    font-size:2rem;
-}
-
-.menu ul li a:hover{ /*Acción para cuando el mouse pasa por encima*/
-    background-color: rgba(203, 138, 0, 1);
-    border-radius: 0.5rem;
-    /* padding:0.5rem; --> Esto causa problemas con el padding del "#menu nav ul li a"*/
-}
-
-.menu ul li ul{
-    display: none; /* Ocultar sublistas por defecto */
-    position: absolute; /* Posicionar sublistas de manera absoluta */
-    top: 100%; /* Desplazar sublistas hacia abajo */
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    border: none;/*solid #ccc;*/
-    padding: 0.5rem 0rem;
-    font-size:1rem;
-}
-
-.menu ul li:hover ul{
-    display:block; /* Mostrar sublistas cuando se pasa el ratón sobre el elemento padre */
-    border-radius: 0.5rem;
-    padding:0.5rem;}
-
-
-/* Carusel de Imágenes */
-.carousel {
-    overflow: hidden; /* Oculta el desbordamiento para mantener las imágenes dentro del contenedor */
-    width:80%;
-    margin:auto;
-    margin-top:10rem;
-
-}
+/*Carusel de Imágenes*/
 /* Estilos para la lista de imágenes */
-.slides {
-    list-style: none; /* Eliminar los puntos de lista */
-    padding: 0; /* Eliminar el relleno predeterminado */
-    margin: 0; /* Eliminar el margen predeterminado */
-    width: auto; /* Ancho suficiente para contener todas las imágenes en línea */
-    white-space: nowrap; /* Evitar el salto de línea */
-    transition: transform 0.5s ease; /* Agregar una transición suave */
-    display: flex; /* Mostrar las imágenes en línea */
-    overflow-x: auto; /* Permitir el desplazamiento horizontal */
-}
-/* Estilos para cada imagen en el carrusel */
-.slides li {
-    flex: 0 0 auto; /* Establecer el ancho de cada imagen */
-    /*width: 16.666%; Define el ancho de cada imagen */
-    width: 100%; /* Ajustar el ancho de cada imagen al ancho del contenedor */
-    flex: 1 0 auto; /* Establece el ancho de cada imagen */
-    margin-right: -60rem;
+.carousel {
+    width: 80%; /* Ajusta esto según tus necesidades, el 60% es solo un ejemplo*/
+    overflow: hidden; /*Oculta las imágenes que están fuera del contenedor*/
+    margin: 0 auto; /*Centra el carrusel en la página*/
 }
 
-.slides li:first-child {
-    margin-left: -30rem; /* Elimina el margen izquierdo para el primer elemento */
+.slides {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Propiedad de box-model: Permitir el desplazamiento horizontal */
+    margin: 10rem 5rem auto 5rem;
+    /* margin: 0; Eliminar el margen predeterminado */
+     /* width: auto; Ancho suficiente para contener todas las imágenes en línea */
+}
+
+.slides li {
+    /* margin-left: 2rem; */
+    /* padding: 0 2rem;
+    width: 100rem; */
+    flex: 0 0 33.3333%; /* Muestra 3 imágenes a la vez, ajusta a 50% para 2 imágenes */
+    box-sizing: border-box;
+    padding: 0 1rem; /* Espacio entre las imágenes */
 }
 
 .slides li img {
     max-width: 100%; /* Ajusta el ancho de la imagen al ancho del elemento de lista */
     height: auto; /* Mantiene la proporción de aspecto de la imagen */
-    width: 30%;
+    /* width: 100%; */
+
 }
 
 footer {
@@ -209,7 +224,7 @@ footer {
 .contacto img{
     display:inline;
     width: 3rem;
-    margin:0.5  rem;
+    margin:0.5rem;
     vertical-align: middle;
 }
 
@@ -272,39 +287,22 @@ footer {
 /*mobile*/
 @media screen and (min-width: 320px) and (max-width: 767px){
     .grid-container {   
-        grid-template-columns: 1, 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 4rem 100rem 30rem 20rem;
         grid-template-areas:    
             "header"
             "main"
             "section"
-            "footer"
-            ;
-        /* grid-row-gap: 1rem;
-        grid-column-gap: 1rem; */
+            "footer";
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
     }
 }
-/*tablet*/      
-@media screen and (min-width: 768px) and (max-width:1023px){
+/*tablet*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
     .grid-container {   
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 4rem 100rem 30rem 20rem;
-        grid-template-areas:    
-            "header header header"
-            "main main main"
-            "section section section"
-            "footer footer footer"
-            ;
-        /* grid-row-gap: 1rem;
-        grid-column-gap: 1rem; */
-    }   
-}
-
-/*desktop*/
-@media screen and (min-width: 1024px){
-    .grid-container {   
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 4rem 100rem 30rem 20rem;
+        grid-template-rows: 4rem 120rem 30rem 20rem;
         grid-template-areas:    
             "header header header"
             "main main main"
@@ -313,7 +311,31 @@ footer {
             ;
         grid-row-gap: 1rem;
         grid-column-gap: 1rem;
-    }   
+    }
+
+    /* Carusel de Imágenes */
+    .carousel {
+        overflow: hidden; /* Oculta el desbordamiento para mantener las imágenes dentro del contenedor */
+        width:80%;
+        margin:auto;
+        margin-top:10rem;
+    }
+}
+
+/*desktop*/
+@media screen and (min-width: 1024px){
+    .grid-container {   
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 4rem 80rem 30rem 20rem;
+        grid-template-areas:    
+            "header header header"
+            "main main main"
+            "section section section"
+            "footer footer footer"
+            ;
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+    }
 }
         
 /* .galeriaImagenes{
