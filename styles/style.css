@@ -110,10 +110,14 @@ header{
     padding:0.5rem;
 }
 
+.grid-section {
+    margin: 0 2rem 0 2rem;
+}
+
 body {
     display:flex;
     /* width: 1000px; */
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 0rem;
     background-color: none;
     /* padding: 0 20px 20px 20px; */
     color:#ffffff;
@@ -188,7 +192,11 @@ li {
     max-width: 100%; /* Ajusta el ancho de la imagen al ancho del elemento de lista */
     height: auto; /* Mantiene la proporción de aspecto de la imagen */
     /* width: 100%; */
+}
 
+.video-container {
+    /* flex-direction: row; */
+    justify-content: space-around;
 }
 
 footer {
@@ -197,7 +205,7 @@ footer {
 }
 
 .footer-general {
-    padding:1rem;
+    padding:0; /*con 1, agrega un espacio debajo del footer*/
     margin:0;
 }
 
@@ -207,8 +215,8 @@ footer {
 
 .contacto {
     display:flex; /*display flex para contacto que contiene a redes-sociales y a información-contacto*/
-    flex-direction: row;
-    justify-content: space-between;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
 }
 
 .redes-sociales,
@@ -337,39 +345,3 @@ footer {
         grid-column-gap: 1rem;
     }
 }
-        
-/* .galeriaImagenes{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 3rem 4rem 3rem 2rem ;
-    grid-template-areas:
-        "img1 img2 img3"
-        ". . . "
-        "img3 img4 img6"
-    ;
-    grid-row-gap: 2rem;
-    grid-column-gap: 2rem;
-} */
-
-
-/*Crear galería de imágnees sin necesidad de asignar una clase a cada imagen
-.grupo1 img:nth-child(1)
-.img1 {
-    grid-area: img1 ;
-}
-
-.img2 {
-    grid-area: img2 ;
-}
-.img3 {
-    grid-area: img3 ;
-}
-.img4 {
-    grid-area: img4 ;
-}
-.img5 {
-    grid-area: img5 ;
-}
-.img6 {
-    grid-area: img6 ;
-} */    
