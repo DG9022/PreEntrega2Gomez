@@ -7,7 +7,7 @@
 } 
 
 html{
-    background-image:url("../images/Background-3d-largo.png");
+    background-image:url("../images/background-3d-largo.png");
     /* background-image:linear-gradient(black, grey, white, orange); */
     background-size:cover;
     /* background-repeat:no-repeat; */
