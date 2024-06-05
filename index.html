@@ -13,42 +13,29 @@
     </head>
     <body class="grid-container">
         <header id="inicio" class="header grid-header">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logo.png" alt="Logo">
-                    </a>
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
-                    <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modelado</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/assets.html">Assets</a></li>
-                                    <li><a class="dropdown-item" href="pages/personajes.html">Personajes</a></li>
-                                    <!-- <li><a class="dropdown-item" href="pages/mas.html">Más..</a></li> -->
-                                </ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/animaciones.html">Animaciones</a>
-                            </li>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="pages/sobremi.html">Sobre mí</a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>  
-                </div>
-            </nav>
+            <div>
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a>Modelado</a> 
+                            <ul>
+                                <li><a href="pages/assets.html">Assets</a></li>
+                                <li><a href="pages/personajes.html">Personajes</a></li>
+                                <!-- <li><a href="pages/mas.html">Más...</a></li> -->
+                            </ul>
+                        </li>
+                        <li><a href="pages/animaciones.html">Animaciones</a></li>
+                        <!-- <li><a href="pages/sobremi.html">Sobre mí</a></li> -->
+                        <li><a href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="grid-main">
+            <h1 class="tituloprincipal">Un diseño para cada objetivo.<br>Un objetivo en cada diseño</h1>
             <div class="carousel">
                 <!--Carrusel de imágenes-->
                 <ul class="slides">
@@ -60,23 +47,29 @@
                     <li><img src="images/avion.png" alt="Avion"></li>
                 </ul>
             </div>
-            <h1 class="tituloprincipal">Un diseño para cada objetivo.<br>Un objetivo en cada diseño</h1>
             <section class="grid-section">
-                <div class="imagen">
-                    <img src="imagen.png" alt="Imagen 1">
+                <div class="grilla-imagen">
+                    <img src="images/robot-diseño-notfoto.png" alt="Imagen 1">
+                        <div>
+                            <h3>Ideando el diseño</h3>
+                            <p>El modelado 3d puede implicar trabajar en un objeto o personaje a pedido, con formas y características determinadas, o puede precisar de una elaboración desde cero, que implica ya un diseño y creación por parte del artista 3d.</p>
+                        </div>
                 </div>
-                <h3>Ideando el diseño</h3>
-                <p>El modelado 3d puede implicar trabajar en un objeto o personaje a pedido, con formas y características determinadas, o puede precisar de una elaboración desde cero, que implica ya un diseño y creación por parte del artista 3d.</p>
-                <div class="imagen2">
-                    <img src="imagen.png" alt="Imagen 1">
-                <h3>Creando el modelo</h3>
+                <div class="grilla-imagen">
+                    <div>
+                            <h3>Creando el modelo</h3>
+                            <p>En el momento de comenzar a modelar se tienen en cuenta otros aspectos además de la parte visual. Por ejemplo, la parte funcional del modelo. ¿Para qué será utilizado?. Videjuegos, animaciones para publicidad, renders de imágenes estáticas. Dependiendo del fin, se seleccionará el tipo de modelado a relizar, puesto que para cada propósito existe una manera de realizar el trabajo 3d. </p>
+                    </div>
+                        <img src="images/robot-wireframe.png" alt="Imagen 2">
                 </div>
-                <p>En el momento de comenzar a modelar se tienen en cuenta otros aspectos además de la parte visual. Por ejemplo, la parte funcional del modelo. ¿Para qué será utilizado?. Videjuegos, animaciones para publicidad, renders de imágenes estáticas. Dependiendo del fin, se seleccionará el tipo de modelado a relizar, puesto que para cada propósito existe una manera de realizar el trabajo 3d. </p>
-                <div class="imagen3">
-                    <img src="imagen.png" alt="Imagen 1">
+                <div class="grilla-imagen">
+                    <img src="images/robot-render.png" alt="Robot-render">
+                    <div>
+                        <h3>Modelo final</h3>
+                        <p>El producto final es el resultado de la conjunción del diseño y el modelado, a través de horas, días e incluso semanas de trabajo, dependiendo del tipo de modelo, y nuevamente de su utilización. Pero el diseño y modelado son solo una parte del trabajo 3d. Dependiendo del proyecto, el proceso puede requerir además: texturizado, rigging, animación, armado de la escena, iluminación y renderización. </p>
+                    </div>
                 </div>
-                <h3>Modelo final</h3>
-                <p>El producto final es el resultado de la conjunción del diseño y el modelado, a través de horas, días e incluso semanas de trabajo, dependiendo del tipo de modelo, y nuevamente de su utilización. Pero el diseño y modelado son solo una parte del trabajo 3d. Dependiendo del proyecto, el proceso puede requerir además: texturizado, rigging, animación, armado de la escena, iluminación y renderización. </p>
+                </div>
             </section>
         </main>
         <footer class="grid-footer">

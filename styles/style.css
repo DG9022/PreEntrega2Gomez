@@ -7,16 +7,22 @@
 } 
 
 html{
-    background-image:url("../images/background.svg");
-    background-size:cover;    
+    background-image:url("../images/Background-3d-largo.png");
+    /* background-image:linear-gradient(black, grey, white, orange); */
+    background-size:cover;
+    /* background-repeat:no-repeat; */
     /* background-repeat: repeat-x; */
     font-family: "Baloo 2", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 62.5%;
-    /*1rem = 10px*/ 
+    /*1rem = 10px*/
     }
+
+/* .grid-container{
+    background-color: green;
+} */
 
 /* 
 .parallax{
@@ -29,9 +35,9 @@ html{
 } */
 
 header{
-    /* display:flex; --> Interactúa mal con el flex del body: hace que el menú quede a la izquierda en el contenedor*/
+    display:flex; /*--> Interactúa mal con el flex del body: hace que el menú quede a la izquierda en el contenedor */
     justify-content:space-between;
-    /* flex-direction: row; */
+    flex-direction: row;
     /* align-items: center; */
     background-color:black;
     /* color:black; */
@@ -46,17 +52,17 @@ header{
 
 /*LOGO*/
 .header img {
-    /* display: flex; */
-    /* justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
     width: 18rem;
     height: auto;
 }
 
-/* .navbar {
+.navbar {
     justify-content: flex-end;
     align-items: center;
     width: auto;
-} */
+}
 
 .menu {
     display: flex;
@@ -73,7 +79,7 @@ header{
 }
 
 .menu ul li{
-    /*display:inline; Pone los botones en línea*/
+    display:inline; /* Pone los botones en línea */
     margin-right: 1rem; /*Margen de la caja con el borde de la pantalla*/
     position:relative; /* Posición para las sublistas */
 }
@@ -114,14 +120,23 @@ header{
     margin: 0 2rem 0 2rem;
 }
 
-body {
+/* body {
     display:flex;
-    /* width: 1000px; */
+    height: auto;
+    width: 1000px;
     margin: 1rem 1rem 1rem 0rem;
     background-color: none;
-    /* padding: 0 20px 20px 20px; */
+    padding: 0 20px 20px 20px;
     color:#ffffff;
-    /* border: 5px solid rgb(255, 255, 255); */
+    border: 5px solid rgb(255, 255, 255);
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    background-color: none;
+    color:#ffffff;
 }
 
 h1 {
@@ -138,17 +153,61 @@ h1 {
     font-size:5rem;
 }
 
+main {
+    height: auto;
+    width: 100%;
+}
+
 h3{
     font-size: 3rem;
+    /* margin-bottom: 10rem; */
+}
+
+.grilla-imagen{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    margin: 0 0 3rem 0;
+}
+
+.grilla-imagen img{
+    width: 40rem;
+    height: auto;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.grilla-imagen p{
+    width: 70rem;
+    height: auto;
+}
+
+.grilla-video{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    margin: 0 0 3rem 0;
+}
+
+.grilla-video video{
+    width: 40rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.grilla-video p{
+    width: 70rem;
+    height: auto;
 }
 
 p{
-    font-size: 1rem;
+    font-size: 2.5rem;
     text-align:justify;
 }
 
-p,
-li {
+p li {
     font-size: 1.6rem;
     line-height: 2;
     letter-spacing: 0.1rem;
@@ -174,7 +233,7 @@ li {
     list-style: none;
     flex-wrap: nowrap;
     overflow-x: auto; /* Propiedad de box-model: Permitir el desplazamiento horizontal */
-    margin: 10rem 5rem auto 5rem;
+    margin: 1rem 5rem 5rem 5rem;
     /* margin: 0; Eliminar el margen predeterminado */
      /* width: auto; Ancho suficiente para contener todas las imágenes en línea */
 }
@@ -191,6 +250,7 @@ li {
 .slides li img {
     max-width: 100%; /* Ajusta el ancho de la imagen al ancho del elemento de lista */
     height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    border-radius: 1rem;
     /* width: 100%; */
 }
 
@@ -200,9 +260,35 @@ li {
 }
 
 footer {
+    align-items: flex-end;
     font-size:2rem;
     background-color: black;
+    position:relative;
+    bottom:0%;
+    margin-top:auto;
 }
+
+footer p, li{
+    font-size:1.6rem;
+}
+
+/* .content-wrapper {
+    flex: 1 0 auto;
+} */
+
+/* footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    font-size:2rem;
+    background-color: black;
+    color:#ffffff;
+    text-align:center;
+    width:100%;
+    margin-top:auto;
+} */
 
 .footer-general {
     padding:0; /*con 1, agrega un espacio debajo del footer*/
@@ -254,7 +340,7 @@ footer {
     flex-direction: row;
     justify-content: end;
     position: sticky;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 60rem;
     margin-right: 1rem;
 }
@@ -296,11 +382,10 @@ footer {
 @media screen and (min-width: 320px) and (max-width: 767px){
     .grid-container {   
         grid-template-columns: 1fr;
-        grid-template-rows: 4rem 100rem 30rem 20rem;
+        grid-template-rows: 4rem auto 20rem;
         grid-template-areas:    
             "header"
             "main"
-            "section"
             "footer";
         grid-row-gap: 1rem;
         grid-column-gap: 1rem;
@@ -310,11 +395,10 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .grid-container {   
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 4rem 120rem 30rem 20rem;
+        grid-template-rows: 4rem auto 20rem;
         grid-template-areas:    
             "header header header"
             "main main main"
-            "section section section"
             "footer footer footer"
             ;
         grid-row-gap: 1rem;
@@ -334,11 +418,10 @@ footer {
 @media screen and (min-width: 1024px){
     .grid-container {   
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 4rem 80rem 30rem 20rem;
+        grid-template-rows: 4rem auto 20rem;
         grid-template-areas:    
             "header header header"
             "main main main"
-            "section section section"
             "footer footer footer"
             ;
         grid-row-gap: 1rem;

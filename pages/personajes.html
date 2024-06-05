@@ -13,42 +13,52 @@
     </head>
     <body class="grid-container">
         <header id="inicio" class="header" class="grid-header"> 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="Logo"></a>
-                <div class="menu" class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modelado</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="assets.html">Assets</a></li>
-                            <li><a class="dropdown-item" href="personajes.html">Personajes</a></li>
-                            <!-- <li><a class="dropdown-item" href="mas.html">Más..</a></li> -->
-                        </ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="animaciones.html">Animaciones</a>
-                    </li>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="sobremi.html">Sobre mí</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    </ul>
-                </div>
+            <div>
+                <a href="../index.html"><img src="../images/logo.png" alt="Logo"></a>
             </div>
-        </nav>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a>Modelado</a>
+                            <ul>
+                                <li><a href="assets.html">Assets</a></li>
+                                <li><a href="personajes.html">Personajes</a></li>
+                                <!-- <li><a href="mas.html">Más...</a></li> -->
+                            </ul>
+                        </li>
+                        <li><a href="animaciones.html">Animaciones</a></li>
+                        <!-- <li><a href="sobremi.html">Sobre mí</a></li> -->
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="grid-main">
-        <h1 class="titulos">Personajes</h1>
-        <section id="video">
-            <!--dirección del video -->
-        </section>
-        <p class="pruebaParrafo">Modelado de personajes para...</p>
+            <h1 class="titulos">Personajes</h1>
+            <section id="video">
+                <div class="grilla-imagen">
+                    <img src="../images/fido-dido.png" alt="Imagen 1">
+                        <div>
+                            <h3>Personajes para animaciones</h3>
+                            <p>Aunque siempre depende del tipo de uso que se le dé, para las animaciones en general se suelen utilizar personajes y objetos que se vean suaves. Además, los personajes para animación deben tener buenas terminaciones de malla para no generar problemas al momento de añadir los huesos para poder crear el movimiento y que no se generen deformaciones con el mismo.</p>
+                        </div>
+                </div>
+                <div class="grilla-imagen">
+                    <div>
+                            <h3>Personajes para videojuegos</h3>
+                            <p>Si bien este es solo un tipo de personajes de la gran cantidad que se usan para los videojuegos, este estilo es común en juegos para móvil, en el cual es importante optimizar la parte gráfica. En este caso tenemos un personaje para un juego de plataformas en donde los personajes solamente se mueven en cruz y por casillero.</p>
+                    </div>
+                        <img src="../images/ladron-lowpoly.png" alt="Imagen 2">
+                </div>
+                <div class="grilla-imagen">
+                    <img src="../images/robot-beacon.png" alt="Robot-render">
+                    <div>
+                        <h3>Modelos para impresión 3D</h3>
+                        <p>Otro tipo de personajes son aquellos que deben ser realizados con medidas reales para poder ser impresos en 3D. Este tipo de personajes no llevan animación ni texturizado, sin embargo su dificultad radica en que las piezas deben tener tamaños específicos ya que conformarán un modelo real y cada parte debe encajar, una vez impresa, con las demás.</p>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="grid-footer">
             <div class="footer-general">
@@ -72,6 +82,9 @@
                 </div>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+        </script>
     </body>
 </html>

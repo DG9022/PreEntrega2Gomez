@@ -12,43 +12,46 @@
         <title>3Deleando - Assets</title>
     </head>
     <body class="grid-container">
-        <header id="inicio" class="header" class="grid-header">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="Logo"></a>
-                    <div class="menu" class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Modelado</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="assets.html">Assets</a></li>
-                                <li><a class="dropdown-item" href="personajes.html">Personajes</a></li>
-                                <!-- <li><a class="dropdown-item" href="mas.html">Más..</a></li> -->
+        <header id="inicio" class="header grid-header">
+            <div>
+                <a href="../index.html"><img src="../images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a>Modelado</a>
+                            <ul>
+                                <li><a href="assets.html">Assets</a></li>
+                                <li><a href="personajes.html">Personajes</a></li>
+                                <!-- <li><a href="mas.html">Más...</a></li> -->
                             </ul>
-                        <li class="nav-item">
-                            <a class="nav-link" href="animaciones.html">Animaciones</a>
                         </li>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="sobremi.html">Sobre mí</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        </ul>
+                        <li><a href="animaciones.html">Animaciones</a></li>
+                        <!-- <li><a href="sobremi.html">Sobre mí</a></li> -->
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="grid-main">    
+            <h1 class="titulos">Assets</h1>
+            <section class="alineacion-grillas grid-section">
+                <div class="grilla-video">
+                    <video src="../images/assetsVikingos.mp4" alt="armasVikingos" autoplay controls></video>
+                    <div>
+                        <h3>Armas vikingas low poly</h3>
+                        <p class="pruebaParrafo">Un ejemplo de assets simples en formato lowpoly, que pueden ser usados fácilmente en cualquier videojuego por su baja cantidad de polígonos, lo que facilita su carga y además tiene ese aspecto facetado carácterístico tan buscado en algunos tipos de juegos. El modelado lowploy implica hacer más con menos. Se crean distintos tipos de elementos intentando mantener solamente las formas bases para representar el objeto o personaje, reduciendo la cantidad de triángulos al mínimo.</p>
                     </div>
                 </div>
-            </nav>
-        </header>
-        <main class="grid-main">
-        <h1 class="titulos">Assets</h1>
-        <section id="video" class="grid-section">
-            <!--dirección del video -->
-        </section>
-        <p class="pruebaParrafo">Assets para animaciones y videojuegos...</p>
+                <div class="grilla-video">
+                    <div>
+                        <h3>Pociones mágicas</h3>
+                        <p class="pruebaParrafo">Este modelado está más pensado para animaciones corta como la que se ve en este video. Si bien los modelos son de relativamente bajos polígonos, no son lowploy, pero aún así mantienen una buena relación entre aspecto/cantidad de polígonos</p>
+                    </div>
+                    <video src="../images/assetsMagia.mp4" alt="armasVikingos" autoplay controls></video>
+                </div>
+            </section>
         </main>
         <footer class="grid-footer">
             <div class="footer-general">
